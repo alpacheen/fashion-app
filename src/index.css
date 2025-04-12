@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0;
+  }
+  body {
+    @apply overflow-x-hidden font-Sirin;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply m-0 p-0;
+  }
+  a {
+    @apply no-underline text-inherit;
+  }
+}
+
+.vibeTitle {
+  font-family: Kaushan Script;
+  color: antiquewhite;
+  font-size: 200px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
