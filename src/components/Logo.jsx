@@ -1,7 +1,39 @@
 import React from "react";
 import { LogoContainer } from "../styles/Themes";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
+
+const pathVariants = {
+  hidden: {
+    opacity: 0,
+    pathLength: 0,
+  },
+  visible: {
+    opacity: 1,
+    pathLength: 1,
+
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
+    },
+  },
+};
+const textVariants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+  visible: {
+    opacity: 1,
+    x: -5,
+
+    transition: {
+      duration: 2,
+      delay: 2,
+      ease: "easeInOut",
+    },
+  },
+};
 
 const Logo = () => {
   return (
@@ -15,9 +47,22 @@ const Logo = () => {
           fill="none"
         >
           <g stroke="#faebd7">
-            <path d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z" />
+            <motion.path
+              variants={pathVariants}
+              initial="hidden"
+              animate="visible"
+              d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"
+            />
           </g>
         </svg>
+        <motion.span
+          variants={textVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-xl text-[#faebd7]"
+        >
+          Vibe Studio
+        </motion.span>
       </Link>
     </LogoContainer>
   );

@@ -40,9 +40,10 @@ text-neutral-200
 
 export const LogoContainer = tw.div`
 absolute
-top-[1rem]
+top-[2rem]
 left-[1rem]
 w-full
 text-white
 z-10
+
 `;
