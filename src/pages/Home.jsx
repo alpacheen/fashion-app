@@ -2,15 +2,17 @@ import React from "react";
 import { Parallax } from "react-scroll-parallax";
 import CoverVideo from "../components/CoverVideo";
 import Logo from "../components/Logo";
+import { Section } from "../styles/Themes";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
     <>
-      <section className="relative min-h-[200vh] overflow-hidden">
+      <Section>
         <CoverVideo />
         <Logo />
-        <h1>NavBar</h1>
-      </section>
+        <NavBar />
+      </Section>
     </>
   );
 };

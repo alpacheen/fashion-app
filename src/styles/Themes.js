@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import CoverVideo from "../components/CoverVideo";
+
 export const dark = {
   body: "#202020",
   text: "#fff",
@@ -10,6 +10,11 @@ export const dark = {
 
   fontxs: "0.75em",
 };
+
+export const Section = tw.section`
+relative
+min-h-[200vh]
+overflow-hidden`;
 
 // CoverVideo
 export const VideoContainer = tw.section`
@@ -34,6 +39,7 @@ flex-col
 justify-center
 items-center
 text-neutral-200
+
 `;
 
 //Logo
@@ -44,6 +50,53 @@ top-[2rem]
 left-[1rem]
 w-full
 text-white
-z-10
+z-10 
 
+`;
+
+export const NavContainer = tw.div`
+z-6
+w-screen
+absolute
+top-0
+flex
+justify-center
+items-center
+
+`;
+
+export const MenuBtn = tw.li`
+bg-[rgba(255,255,255,0.9)]
+list-none
+text-[#202020]
+w-[15rem]
+h-[2.5rem]
+text-xl
+font-semibold
+uppercase
+flex
+justify-center
+items-center
+border-none
+outline-none
+cursor-pointer
+absolute
+top-[100%]
+left-[50%]
+-translate-x-1/2
+`;
+
+export const MenuItems = tw.ul`
+relative
+h-20
+bg-[#202020]
+text-[#faebd7]
+list-none
+
+flex
+justify-around
+items-center
+w-full
+px-[10rem]
+py-0
 `;
