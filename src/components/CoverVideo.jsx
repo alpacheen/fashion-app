@@ -56,12 +56,13 @@ const CoverVideo = () => {
           ))}
         </motion.div>
         <Parallax speed={-1}>
-          <h2
+          <motion.h2
+            variants={letterVariants}
             className="text-2xl"
             style={{ textShadow: "3px 3px 3px rgba(0,0,0,0.4)" }}
           >
             Create. Embrace. Awaken
-          </h2>
+          </motion.h2>
         </Parallax>
       </Title>
     </VideoContainer>

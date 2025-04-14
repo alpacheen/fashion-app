@@ -1,4 +1,5 @@
 import tw from "tailwind-styled-components";
+import { motion } from "framer-motion";
 
 export const dark = {
   body: "#202020",
@@ -25,7 +26,7 @@ relative`;
 export const DarkOverlay = tw.div`
 absolute
 inset-0
-z-10
+z-5
 bg-black
 bg-opacity-65
 `;
@@ -33,7 +34,7 @@ bg-opacity-65
 export const Title = tw.div`
 absolute
 inset-0
-z-30
+z-10
 flex
 flex-col
 justify-center
@@ -50,23 +51,46 @@ top-[2rem]
 left-[1rem]
 w-full
 text-white
-z-10 
+z-10
 
 `;
 
-export const NavContainer = tw.div`
-z-6
+export const NavContainer = tw(motion.div)`
 w-screen
+z-10
 absolute
-top-0
+
+${(p) => (p.$click ? "top-0" : "-top-20")}
+duration-300
+transition-all
+ease-in-out
+
 flex
 justify-center
 items-center
+`;
 
+//Menu
+
+export const MenuItems = tw(motion.ul)`
+relative
+h-20
+bg-[#202020]
+opacity-70
+text-[#faebd7]
+list-none
+
+flex
+justify-around
+items-center
+w-full
+px-[10rem]
+py-0
 `;
 
 export const MenuBtn = tw.li`
-bg-[rgba(255,255,255,0.9)]
+bg-[#faebd7]
+opacity-70
 list-none
 text-[#202020]
 w-[15rem]
@@ -86,17 +110,8 @@ left-[50%]
 -translate-x-1/2
 `;
 
-export const MenuItems = tw.ul`
-relative
-h-20
-bg-[#202020]
+export const MenuItem = tw(motion.li)`
+uppercase
 text-[#faebd7]
-list-none
-
-flex
-justify-around
-items-center
-w-full
-px-[10rem]
-py-0
+cursor-pointer
 `;
