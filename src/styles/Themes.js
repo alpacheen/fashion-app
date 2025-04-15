@@ -14,7 +14,7 @@ export const dark = {
 
 export const Section = tw.section`
 relative
-min-h-[200vh]
+min-h-[100vh]
 overflow-hidden`;
 
 // CoverVideo
@@ -114,4 +114,39 @@ export const MenuItem = tw(motion.li)`
 uppercase
 text-[#faebd7]
 cursor-pointer
+`;
+
+//About
+
+export const AboutSection = tw.section`
+min-h-screen
+w-[80vw]
+mx-auto
+relative
+`;
+
+export const AboutTitle = tw.h1`
+text-9xl
+font-['Kaushan_Script']
+left-[5%] 
+z-30
+text-black
+opacity-90
+mt-5
+`;
+
+export const Left = tw.div`
+w-[50%]
+text-lg
+relative
+z-5
+
+`;
+
+export const Right = tw.div`
+w-full
+md:w-[50%]
+relative
+mt-12
+md:mt-0
 `;

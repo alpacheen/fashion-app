@@ -1,5 +1,4 @@
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
 import CoverVideo from "../components/CoverVideo";
 import Logo from "../components/Logo";
 import { Section } from "../styles/Themes";
