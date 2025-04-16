@@ -45,7 +45,7 @@ const About = () => {
             </motion.div>
           </Left>
            <div className="absolute inset-0 opacity-50 pointer-events-none z-20"><Parallax speed={-10} translateY={[-50,50]} >
-            <img src={img1} alt="About us" width="400" height="600" className=" opacity-75 my-16"/>
+            <img src={img1} alt="About us" height="500" width="500" className="  my-16"/>
             </Parallax>
             </div>
           <Right className="flex">
