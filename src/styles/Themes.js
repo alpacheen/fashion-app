@@ -70,7 +70,7 @@ justify-center
 items-center
 `;
 
-//Menu
+//---Menu---
 
 export const MenuItems = tw(motion.ul)`
 relative
@@ -115,7 +115,7 @@ text-[#faebd7]
 cursor-pointer
 `;
 
-//About
+//--About--
 
 export const AboutSection = tw.section`
 min-h-screen
@@ -139,7 +139,7 @@ mt-5
 export const Left = tw.div`
 w-full
 text-2xl
-font-['Sirin Script']
+font-mono
 relative
 z-30
 text-black
@@ -157,6 +157,64 @@ relative
 mt-8
 md:mt-0
 flex
-
-
 `;
+
+//--Shop--
+
+export const
+ ShopSection = tw.section`
+ min-h-screen
+ w-full
+ mx-auto
+ overflow-hidden
+ flex
+ flex-start
+ items-start
+ relative
+ `;
+
+ export const ShopTitle = tw.h1`
+text-8xl
+[text-shadow:3px_3px_3px_rgba(0_0_0_/_0.8)]
+font-['Kaushan_Script']
+font-light
+left-[5%] 
+z-50
+text-[#faebd7]
+absolute
+top-[1.5rem]
+ `;
+
+ export const ShopLeft = tw.div`
+ w-[35%]
+ bg-[#202020]
+ text-[#faebd7]
+ min-h-screen
+ z-40
+ left-0
+ flex
+ flex-col
+ justify-center
+ items-center
+ `
+ 
+ export const ShopRight = tw.div`
+ absolute
+  left-[35%]
+  top-0
+  min-h-screen
+  w-max
+  flex
+  flex-row
+  items-center
+  whitespace-nowrap
+  bg-[#bebebe]
+  will-change-transform
+
+  [&>img]:w-80
+  [&>img]:h-auto
+  [&>img]:my-0
+  [&>img]:mx-8
+  [&>img]:object-cover
+  [&>img]:flex-shrink-0
+ `
