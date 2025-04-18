@@ -211,10 +211,18 @@ top-[1.5rem]
   bg-[#bebebe]
   will-change-transform
 
-  [&>img]:w-80
+  
+ `
+ export const Item = tw(motion.div)`
+ inline-block
+ w-80
+ mr-24
+
+ [&>img]:w-full
   [&>img]:h-auto
-  [&>img]:my-0
-  [&>img]:mx-8
-  [&>img]:object-cover
-  [&>img]:flex-shrink-0
+  [&>img]:cursor-pointer
+  
+  [&>h1]:font-light
+  [&>h1]:items-center
+  [&>h1]:cursor-pointer
  `
