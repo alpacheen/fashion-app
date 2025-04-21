@@ -58,7 +58,7 @@ const CoverVideo = () => {
         <Parallax speed={-1}>
           <motion.h2
             variants={letterVariants}
-            className="text-2xl"
+            className="text-2xl font-mono"
             style={{ textShadow: "3px 3px 3px rgba(0,0,0,0.4)" }}
           >
             Create. Embrace. Awaken

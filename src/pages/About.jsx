@@ -37,7 +37,7 @@ const About = () => {
                 styles, but for most people, all of the options are in the box. We
                 specialize in making things that make you happy.
               </p>
-              <p>
+              <p >
                 We strive to build on our vision. As a fashion label, we do our best
                 to create amazing experiences for all people. We are always looking
                 to make something that is easy for everyone.

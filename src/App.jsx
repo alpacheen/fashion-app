@@ -5,6 +5,7 @@ import {
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
+import Banner from "./pages/Banner"
 
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Home />
           <About />
           <Shop />
+          <Banner/>
         </main>
       </ParallaxProvider>
   );

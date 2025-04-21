@@ -61,7 +61,7 @@ z-10
 absolute
 
 ${(p) => (p.$click ? "top-0" : "-top-20")}
-duration-300
+duration-200
 transition-all
 ease-in-out
 
@@ -161,8 +161,7 @@ flex
 
 //--Shop--
 
-export const
- ShopSection = tw.section`
+export const ShopSection = tw.section`
  min-h-screen
  w-full
  mx-auto
@@ -173,7 +172,7 @@ export const
  relative
  `;
 
- export const ShopTitle = tw.h1`
+export const ShopTitle = tw.h1`
 text-8xl
 [text-shadow:3px_3px_3px_rgba(0_0_0_/_0.8)]
 font-['Kaushan_Script']
@@ -185,7 +184,7 @@ absolute
 top-[1.5rem]
  `;
 
- export const ShopLeft = tw.div`
+export const ShopLeft = tw.div`
  w-[35%]
  bg-[#202020]
  text-[#faebd7]
@@ -196,9 +195,10 @@ top-[1.5rem]
  flex-col
  justify-center
  items-center
- `
- 
- export const ShopRight = tw.div`
+ font-mono
+ `;
+
+export const ShopRight = tw.div`
  absolute
   left-[35%]
   top-0
@@ -211,10 +211,48 @@ top-[1.5rem]
   bg-[#bebebe]
   will-change-transform
 
-  [&>img]:w-80
+  
+ `;
+export const Item = tw(motion.div)`
+ inline-block
+ w-80
+ mr-24
+
+ [&>img]:w-full
   [&>img]:h-auto
-  [&>img]:my-0
-  [&>img]:mx-8
-  [&>img]:object-cover
-  [&>img]:flex-shrink-0
- `
+  [&>img]:cursor-pointer
+  
+  [&>h1]:font-light
+  [&>h1]:items-center
+  [&>h1]:cursor-pointer
+ `;
+
+//  Banner
+
+export const BannerSection = tw.section`
+min-h-screen
+relative
+w-[80%]
+mx-0
+flex
+justify-center
+items-center
+`
+
+export const BannerContainer = tw.div`
+min-h-screen
+flex
+flex-col
+justify-evenly
+items-center
+
+`
+
+export const BannerComponent = tw(motion.div)`
+text-8xl
+font-['Kaushan_Script']
+text-[#faebd7]
+uppercase
+whitespace-nowrap
+cursor-pointer
+`
