@@ -17,10 +17,19 @@ import img8 from "../assets/images/8.webp";
 import img9 from "../assets/images/9.webp";
 import img10 from "../assets/images/10.webp";
 
-// Register GSAP plugin
+
 gsap.registerPlugin(ScrollTrigger);
 
-// Component for each product with framer-motion animation
+const fadeLeftRight = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeOut" } },
+};
+const fadeRightLeft = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0, transition: { duration: 2, ease: "easeOut" } },
+};
+
+
 const Product = ({ img, title = "" }) => {
   return (
     <Item
@@ -74,12 +83,21 @@ const Shop = () => {
       <ShopTitle>New Arrivals</ShopTitle>
 
       <ShopLeft>
-        <p className="text-xl font-mono p-5">
+        <motion.p
+         className="text-xl font-mono p-5"
+         initial="hidden"
+            whileInView="visible"
+            variants={fadeLeftRight}
+            >
           The brand new collection is currently being developed in the USA. We create our products using the best quality material, including the use of some of the purest fabrics to make our products.
-        </p>
-        <p className="text-xl font-mono p-5">
+        </motion.p>
+        <motion.p className="text-xl font-mono p-5"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeRightLeft}
+        >
           We have many different clothing options, like shoes, jackets, and dresses. Not only clothes, but we also provide unique Jewellery as well. It is great for us to carry our new clothes all around the country and look different.
-        </p>
+        </motion.p>
       </ShopLeft>
 
       <ShopRight ref={horizontalRef}>
@@ -95,3 +113,4 @@ const Shop = () => {
 };
 
 export default Shop;
+
