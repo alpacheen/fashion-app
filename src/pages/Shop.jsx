@@ -38,6 +38,7 @@ const Product = ({ img, title = "" }) => {
       whileInView={{ filter: "grayscale(0%)"}}
       transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 1 }}
+      style={{willChange: "filter"}}
     >
       <img src={img} alt={title} width="400" height="600" className='ml-5' />
       <h1 className='text-center font-mono text-lg'>{title}</h1>
