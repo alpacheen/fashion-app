@@ -1,8 +1,9 @@
 import React from "react";
 import MainVideo from "../assets/Walking Girl.mp4";
-import { DarkOverlay, VideoContainer, Title } from "../styles/Themes";
+import { DarkOverlay, VideoContainer, Title } from "../styles/covervideo";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+
 
 const containerVariants = {
   hidden: { opacity: 0 },

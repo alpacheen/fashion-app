@@ -1,5 +1,5 @@
 import React from "react";
-import { LogoContainer } from "../styles/Themes";
+import { LogoContainer } from "../styles/logo";
 import { Link } from "react-router-dom";
 import { delay, motion } from "framer-motion";
 

@@ -7,7 +7,7 @@ import {
   CollectionRight,
   ImageContainer,
   CollectionItem,
-} from "../styles/Themes";
+} from "../styles/newcollection";
 import gsap from "gsap";
 import { motion, useInView } from "framer-motion";
 import img11 from "../assets/images/11.webp";
@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const fadeDown = {
   hidden: { opacity: 0, y: -30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 2, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.5, ease: "easeOut" } },
 };
 
 const Product = ({ img, title = "" }) => {
@@ -91,7 +91,7 @@ const NewCollections = () => {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <CollectionsSection ref={containerRef}>
+    <CollectionsSection ref={containerRef} id='collections'>
       <CollectionTitle
         ref={ref}
         initial={{ opacity: 0, x: -100 }}
@@ -102,13 +102,13 @@ const NewCollections = () => {
       </CollectionTitle>
       <OverLay>
         <ImageContainer ref={verticalRef} style={{ overflow: "visible" }}>
-          <Product img={img11} alt={"Man in Jeans"} title="Ethnic Wear" />
-          <Product img={img12} alt={"Girl in yellow dress"} title="Blazers" />
-          <Product img={img13} alt={"Man in jacket"} title="Antiques" />
+          <Product img={img11} alt={"Man in Jeans"} title="Denim Jackets" />
+          <Product img={img12} alt={"Girl in yellow dress"} title="Dresses" />
+          <Product img={img13} alt={"Man in jacket"} title="Jackets" />
           <Product
             img={img14}
             alt={"Man wearing fashion accessories"}
-            title="Jewellery"
+            title="Ethnic Wear"
           />
         </ImageContainer>
       </OverLay>

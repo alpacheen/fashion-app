@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Shop from "./pages/Shop";
 import Banner from "./pages/Banner"
 import NewCollections from "./pages/NewCollections";
+import Footer from "./pages/Footer";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Shop />
           <Banner/>
           <NewCollections/>
+          <Footer />
         </main>
       </ParallaxProvider>
   );

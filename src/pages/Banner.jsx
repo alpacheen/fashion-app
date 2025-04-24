@@ -1,5 +1,5 @@
 import React from 'react'
-import { BannerSection, BannerComponent, BannerContainer } from '../styles/Themes';
+import { BannerSection, BannerComponent, BannerContainer } from '../styles/banner';
 import { motion} from "framer-motion";
 
 

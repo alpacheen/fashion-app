@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { NavContainer, MenuBtn, MenuItems, MenuItem } from "../styles/Themes";
+import { NavContainer, MenuBtn, MenuItems, MenuItem } from "../styles/navbar";
 import { motion } from "framer-motion";
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
   return (
-    <NavContainer
+    <NavContainer id='home'
       $click={click}
       initial={{
         y: "-100%",
@@ -30,7 +30,6 @@ const NavBar = () => {
           aria-label="Main Menu"
           className="btnShape"
           onClick={() => {
-            console.log("Clicked", !click);
             setClick(!click);
           }}
         >
@@ -40,25 +39,25 @@ const NavBar = () => {
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
         >
-          Home
+          <a href="#home">Home</a>
         </MenuItem>
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
         >
-          About
+          <a href="#about">About</a>
         </MenuItem>
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
         >
-          Shop
+          <a href="#shop">Shop</a>
         </MenuItem>
         <MenuItem
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.9, y: 0 }}
         >
-          New Arrivals
+          <a href="#collections">New Arrivals</a>
         </MenuItem>
       </MenuItems>
     </NavContainer>

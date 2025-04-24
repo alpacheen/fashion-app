@@ -8,7 +8,7 @@ import {
   ShopLeft,
   ShopRight,
   Item
-} from '../styles/Themes';
+} from '../styles/shop';
 
 import img4 from "../assets/images/4.webp";
 import img5 from "../assets/images/5.webp";
