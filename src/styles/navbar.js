@@ -33,7 +33,7 @@ px-[10rem]
 py-0
 `;
 
-export const MenuBtn = tw.li`
+export const MenuBtn = tw.button`
 bg-[#faebd7]
 opacity-70
 list-none

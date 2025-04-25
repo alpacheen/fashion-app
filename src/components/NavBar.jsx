@@ -1,12 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { NavContainer, MenuBtn, MenuItems, MenuItem } from "../styles/navbar";
 import { motion } from "framer-motion";
 
+const navigationItems = [
+  {href: "#home", label: "Home"},
+  {href: "#about", label: "About"},
+  {href: "#shop", label: "Shop"},
+  {href: "#collections", label: "New Arrivals"},
+]
+
 const NavBar = () => {
-  const [click, setClick] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleMenu = useCallback(() => {
+    setIsMenuOpen(prev => !prev);
+  }, []);
   return (
     <NavContainer id='home'
-      $click={click}
+      $click={isMenuOpen}
       initial={{
         y: "-100%",
       }}
@@ -18,6 +28,8 @@ const NavBar = () => {
         delay: 5,
         ease: "easeIn",
       }}
+      role="navigation"
+      aria-label="Main Navigation"
     >
       <MenuItems
         drag="y"
@@ -27,41 +39,32 @@ const NavBar = () => {
       >
         <MenuBtn
           role="button"
-          aria-label="Main Menu"
+          aria-expanded={isMenuOpen}
           className="btnShape"
-          onClick={() => {
-            setClick(!click);
-          }}
+          aria-controls="main-menu"
+          onClick={toggleMenu}
         >
           Menu
         </MenuBtn>
-        <MenuItem
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <a href="#home">Home</a>
-        </MenuItem>
-        <MenuItem
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <a href="#about">About</a>
-        </MenuItem>
-        <MenuItem
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <a href="#shop">Shop</a>
-        </MenuItem>
-        <MenuItem
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <a href="#collections">New Arrivals</a>
-        </MenuItem>
+        <div id="main-menu" className="flex justify-around items-center w-full">
+          {navigationItems.map((item, index) => (
+            <MenuItem
+              key={index}
+              whileHover={{ scale: 1.1, y: -5 }}
+              whileTap={{ scale: 0.9, y: 0 }}
+            >
+              <a 
+                href={item.href}
+                aria-label={item.label}
+              >
+                {item.label}
+              </a>
+            </MenuItem>
+          ))}
+        </div>
       </MenuItems>
     </NavContainer>
   );
 };
 
-export default NavBar;
+export default React.memo(NavBar);
