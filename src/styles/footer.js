@@ -27,3 +27,21 @@ items-center
 export const FooterComponent = tw(motion.footer)`
 w-[80vw]
 `
+export const FooterList = tw.ul`
+list-none flex justify-between items-center flex-wrap m-8 mt-16
+            py-0
+            px-4
+            border-t-2
+            border-[#faebd7]
+            border-b-2
+            border-[#faebd7]
+  [&>li]:p-8
+  [&>li]:text-xl
+  [&>li]:uppercase
+  [&>li]:font-mono
+  [&>li]:cursor-pointer
+  [&>li]:transition-all
+  [&>li]:duration-300
+    [&>li]:ease-in-out
+  [&>li:hover]:scale-110
+  `;

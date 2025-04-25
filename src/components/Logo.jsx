@@ -14,11 +14,12 @@ const pathVariants = {
 
     transition: {
       duration: 2,
+      delay: 4,
       ease: "easeInOut",
     },
   },
 };
-const textVariants = {
+const textVariant = {
   hidden: {
     opacity: 0,
     x: -50,
@@ -29,7 +30,7 @@ const textVariants = {
 
     transition: {
       duration: 2,
-      delay: 2,
+      delay: 5,
       ease: "easeInOut",
     },
   },
@@ -56,12 +57,13 @@ const Logo = () => {
           </g>
         </svg>
         <motion.span
-          variants={textVariants}
+          variants={textVariant}
           initial="hidden"
           animate="visible"
-          className="text-xl text-[#faebd7]"
+          className="text-2xl text-[#faebd7]
+          font-[Sirin]"
         >
-          Vibe Studio
+          Vibe Studios
         </motion.span>
       </Link>
     </LogoContainer>
