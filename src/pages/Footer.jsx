@@ -96,7 +96,7 @@ const Footer = () => {
     >
       <LogoContainer>
         <svg
-          className="w-[6rem] h-auto overflow-visible"
+          className="w-12 h-12 sm:w-16 md:w-24 md:h-24 overflow-visible"
           style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -107,7 +107,7 @@ const Footer = () => {
             <path d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z" />
           </g>
         </svg>
-        <h3 className='text-3xl font-["Sirin"]'>Vibe Studios</h3>
+        <h3 className='text-xl sm:text-2xl md:text-3xl font-["Sirin"] mt-2'>Vibe Studios</h3>
       </LogoContainer>
       
       <FooterComponent

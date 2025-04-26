@@ -60,7 +60,7 @@ const CoverVideo = () => {
         >
           {titleLetters.map(({ char, speed }, index) => (
             <Parallax key={index} speed={speed}>
-              <motion.h1 variants={letterVariants} className="vibeTitle">
+              <motion.h1 variants={letterVariants} className="vibeTitle text-5xl sm:text-7xl md:text-9xl lg:text-[200px]">
                 {char}
               </motion.h1>
             </Parallax>
@@ -69,7 +69,7 @@ const CoverVideo = () => {
         <Parallax speed={-1}>
           <motion.h2
             variants={letterVariants}
-            className="text-2xl font-mono"
+            className="text-lg sm:text-xl md:text-2xl font-mono mt-4"
             style={{ textShadow: "3px 3px 3px rgba(0,0,0,0.4)" }}
           >
             Create. Embrace. Awaken.

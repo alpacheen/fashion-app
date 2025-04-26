@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
-import { NavContainer, MenuBtn, MenuItems, MenuItem } from "../styles/navbar";
-import { motion } from "framer-motion";
+import { NavContainer, MenuBtn, MenuItems, MenuItem, MobileMenu } from "../styles/navbar";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigationItems = [
   {href: "#home", label: "Home"},
@@ -14,6 +14,7 @@ const NavBar = () => {
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev);
   }, []);
+
   return (
     <NavContainer id='home'
       $click={isMenuOpen}
@@ -46,7 +47,7 @@ const NavBar = () => {
         >
           Menu
         </MenuBtn>
-        <div id="main-menu" className="flex justify-around items-center w-full">
+        <div id="main-menu" className="hidden md:flex justify-around items-center w-full"> {/* flex hidden */}
           {navigationItems.map((item, index) => (
             <MenuItem
               key={index}
@@ -62,6 +63,34 @@ const NavBar = () => {
             </MenuItem>
           ))}
         </div>
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <MobileMenu
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden"
+            >
+              {navigationItems.map((item, index) => (
+                <MenuItem
+                  key={index}
+                  whileTap={{ scale: 0.95 }}
+                  className="py-3"
+                >
+                  <a 
+                    href={item.href}
+                    aria-label={item.label}
+                    onClick={toggleMenu}
+                  >
+                    {item.label}
+                  </a>
+                </MenuItem>
+              ))}
+            </MobileMenu>
+          )}
+        </AnimatePresence>
       </MenuItems>
     </NavContainer>
   );

@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 export const AboutSection = tw.section`
 min-h-screen
-w-[90vw]
+w-[95vw]
+md:w-[90vw]
 mx-auto
 relative
 overflow-hidden
@@ -11,7 +12,9 @@ py-12
 `;
 
 export const AboutTitle = tw.h1`
-text-9xl
+text-5xl
+sm:text-7xl
+md:text-9xl
 font-['Kaushan_Script']
 left-[5%] 
 z-80
@@ -22,7 +25,9 @@ mt-5
 
 export const Left = tw.div`
 w-full
-text-2xl
+text-base
+sm:text-xl
+md:text-2xl
 font-mono
 relative
 z-30
@@ -41,4 +46,7 @@ relative
 mt-8
 md:mt-0
 flex
+flex-col
+lg:flex-row
+gap-8
 `;

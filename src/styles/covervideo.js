@@ -22,5 +22,7 @@ flex-col
 justify-center
 items-center
 text-neutral-200
+px-4
+text-center
 
 `;

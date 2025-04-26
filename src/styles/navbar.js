@@ -26,10 +26,13 @@ opacity-70
 text-[#faebd7]
 list-none
 flex
+md:flex-row
 justify-around
 items-center
 w-full
-px-[10rem]
+px-4
+md:px-10
+lg:px-16
 py-0
 `;
 
@@ -38,9 +41,12 @@ bg-[#faebd7]
 opacity-70
 list-none
 text-[#202020]
-w-[15rem]
-h-[2.5rem]
-text-xl
+w-32
+sm:w-40
+md:w-56
+h-10
+text-base
+md:text-xl
 font-semibold
 uppercase
 flex
@@ -50,8 +56,8 @@ border-none
 outline-none
 cursor-pointer
 absolute
-top-[100%]
-left-[50%]
+top-full
+left-1/2
 -translate-x-1/2
 `;
 
@@ -60,5 +66,20 @@ uppercase
 text-[#faebd7]
 cursor-pointer
 font-mono
-text-xl
+text-base
+sm:text-lg
+md:text-xl
+`;
+export const MobileMenu = tw(motion.div)`
+  absolute
+  top-20
+  left-0
+  w-full
+  bg-[#202020]
+  opacity-90
+  flex
+  flex-col
+  items-center
+  overflow-hidden
+  z-50
 `;
