@@ -22,3 +22,20 @@ A modern, animated fashion e-commerce website built with React, Tailwind CSS, an
 - React Scroll Parallax
 - Styled Components (tailwind-styled-components)
 
+
+What I Learned
+
+Working with advanced animation libraries
+Implementing performance optimizations in React
+Responsive design techniques
+Error handling patterns
+
+Future Improvements
+
+Add product detail pages
+Implement shopping cart functionality
+Add user authentication
+Create an admin dashboard
+
+License
+MIT
