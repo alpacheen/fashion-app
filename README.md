@@ -5,7 +5,7 @@ A modern, animated fashion e-commerce website built with React, Tailwind CSS, an
 ![Screenshot or GIF of your project](./screenshot.png)
 
 ## Live Demo
-[View Live Demo](https://your-deployed-url.com)
+[View Live Demo]([https://your-deployed-url.com](https://680d7eaf214da5988c83a161--vibestudios.netlify.app/#collections))
 
 ## Features
 - Animated page transitions and parallax scrolling effects
