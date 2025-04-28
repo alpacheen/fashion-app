@@ -11,7 +11,8 @@ export const LazyImage = ({
   containerClassName = "",
   initial = { filter: "grayscale(100%)" },
   animate = { filter: "grayscale(0%)" },
-  transition = { duration: 0.8 }
+  transition = { duration: 0.8,
+   }
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);

@@ -13,7 +13,10 @@ export const ShopSection = tw.section`
  `;
 
 export const ShopTitle = tw.h1`
-text-8xl
+text-5xl
+sm:text-6xl
+md:text-7xl
+lg:text-8xl
 [text-shadow:3px_3px_3px_rgba(0_0_0_/_0.8)]
 font-['Kaushan_Script']
 font-light
